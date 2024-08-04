@@ -9,6 +9,9 @@ font pango:MesloLGS Nerd Font 12
 # set resolution
 exec --no-startup-id "/bin/sh /home/christian/.config/i3/resolution.sh"
 
+# set wallpaper
+exec --no-startup-id "/bin/sh /home/christian/.config/i3/wallpaper.sh"
+
 # adjust audio
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master 5%+ 
 bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master 5%- 
@@ -180,7 +183,6 @@ exec xset -dpms
 exec xset s noblank
 
 # startup programs background
-exec --no-startup-id feh --bg-fill /usr/share/backgrounds/newwall.png
 exec --no-startup-id picom -f --config ~/.config/i3/picom.conf
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh --shapes
 exec_always --no-startup-id $HOME/.config/i3/alternating_layouts.py
